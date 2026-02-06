@@ -1,5 +1,7 @@
 package oop_99880_Mohamad.Irsyad.Rendyka_Week01
 
+fun calculateStatus(score: Int) = if (score > 75) "Lulus" else "Tidak Lulus"
+
 fun main () {
     var name =  "john thor"
     var score = 80
@@ -13,4 +15,5 @@ fun main () {
         else -> "D"
     }
     println("grade kamu: $grade")
+    println("status: ${calculateStatus(score)}")
 }
