@@ -7,6 +7,9 @@ fun main () {
     var score = 80
 
     println("Nama: $name, Nilai: $score")
+    val studentId: String? = null
+
+    val idlength = studentId?.length ?: 0
 
     val grade = when (score) {
         in 90..100 -> "A"
@@ -16,4 +19,5 @@ fun main () {
     }
     println("grade kamu: $grade")
     println("status: ${calculateStatus(score)}")
+    println("panjang ID: $idlength")
 }
