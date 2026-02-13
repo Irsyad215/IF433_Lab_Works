@@ -1,23 +1,21 @@
-package oop_99880_Mohamad.Irsyad.Rendyka_Week02
+package oop_99880_mohamad_irsyad.week02
 
 class Student (
-    val name: String ,
+    val name: String,
     val nim: String,
-    var gpa: Double = 0.0,
-    var major: String
+    var major: String = "Non-Matriculated",
+    var gpa: Double = 0.0
 ) {
     init {
         if (nim.length != 5) {
-            println("WARNING, objek tercipta dengan NIM ($nim) tang tidak valid")
-            println("data mahasiswa $name mungkin akan bermasalah di sistem")
+            println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid!")
+            println("Data mahasiswa $name mungkin akan bermasalah di sistem.")
         } else {
-            println("LOG: Objek student $name berhasil berkolaborasi di Memory")
+            println("LOG: Objek Student $name berhasil dialokasikan di Memory.")
         }
     }
-    constructor(name: String, nim: String) : this(name, nim, major = "Non-Matriculated") {
-        println("LOG: Menggunakan Constructor jalur umum (tanpa jurusan). ")
+
+    constructor(name: String, nim: String) : this(name, nim, "Non-Matriculated", 0.0) {
+        println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
     }
 }
-
-
-
