@@ -10,7 +10,7 @@ class Student (
             println("WARNING, objek tercipta dengan NIM ($nim) tang tidak valid")
             println("data mahasiswa $name mungkin akan bermasalah di sistem")
         } else {
-            println("LOG: Objek student $name berhasil berkolaborasi di Memory")
+            println("LOG: Objek Student $name berhasil berkolaborasi di Memory")
         }
     }
 }
