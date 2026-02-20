@@ -8,4 +8,6 @@ fun main() {
 
     val player = Player("Irsyad_Pro")
 
+    player.addXp(50)
+    player.addXp(60)
 }
