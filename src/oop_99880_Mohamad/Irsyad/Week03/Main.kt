@@ -1,13 +1,13 @@
 package oop_99880_Mohamad.Irsyad.Week03
 
 fun main() {
-    val e = Employee("Budi")
-    println("--- Test Error ---")
-    e.salary = -1000
-    e.salary = 5000000
-    println("Gaji: ${e.salary}")
+    val sword = Weapon("Excalibur")
+    sword.damage = -50
+    sword.damage = 9999
+    println("Weapon: ${sword.name}, Damage: ${sword.damage}, Tier: ${sword.tier}")
 
-    e.increasePerformance()
+    val player = Player("Irsyad_Pro")
 
-    println("pajak yang harus dibayar: ${e.tax})
+    player.addXp(50)
+    player.addXp(60)
 }
