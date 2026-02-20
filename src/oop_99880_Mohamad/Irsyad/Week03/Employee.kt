@@ -22,3 +22,6 @@ fun increaseperformance() {
 fun printStatus() {
     prinln("karyawan: $name, Rating: $performanceRating")
 }
+
+val tax: Double
+    get() = salaru * 0.
