@@ -9,4 +9,3 @@ open class Employee(val name: String, val baseSalary: Int) {
         return (baseSalary * 0.1).toInt()
     }
 }
-}
