@@ -13,15 +13,9 @@ fun main() {
     myCar.accelerate()
 
     println("\n--- Testing Electric Car ---")
+    // Task 1: Instantiate ElectricCar once [cite: 74]
     val myEv = ElectricCar("Tesla", 4, 95)
-    myEv.accelerate()
-    myEv.honk()
-    myEv.openTrunk()
-
-    println("\n--- Testing Electric Car ---")
-    val myEv = ElectricCar("Tesla", 4, 95)
-    myEv.accelerate()
-    myEv.honk()
-    myEv.openTrunk()
-}
+    myEv.accelerate() // Should show battery capacity and no "super" logic [cite: 69, 70]
+    myEv.honk()       // Inherited from Car [cite: 74]
+    myEv.openTrunk()  // Inherited from Car [cite: 74]
 }
