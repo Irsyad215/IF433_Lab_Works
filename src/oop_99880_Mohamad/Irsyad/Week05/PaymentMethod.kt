@@ -1,4 +1,5 @@
 package oop_99880_Mohamad.Irsyad.Week05
 
-class PaymentMethod {
+abstract class PaymentMethod(val accountName: String) {
+    abstract fun processPayment(amount: Double)
 }
