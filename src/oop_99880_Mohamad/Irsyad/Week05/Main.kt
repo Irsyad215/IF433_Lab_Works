@@ -42,12 +42,14 @@ fun main() {
     val paymentList: List<PaymentMethod> = listOf(myWallet, myCard)
 
     for (pay in paymentList) {
-        println("\nMemproses pembayaran sebesar 75000.0...")
+        println("\n--- Memproses Transaksi Sebesar 75000.0 ---")
         pay.processPayment(75000.0)
 
-        if (pay is EWallet && pay.balance < 75000.0) {
-            println("=> Recovery: Saldo E-Wallet kurang. Melakukan Top Up otomatis...")
+        if (pay is EWallet) {
+            println("=> Deteksi E-Wallet: Mencoba pemulihan saldo...")
+
             pay.topUp(50000.0)
+            println("=> Mencoba kembali pembayaran setelah Top Up:")
             pay.processPayment(75000.0)
         }
     }
