@@ -1,7 +1,5 @@
 package oop_99880_Mohamad.Irsyad.Week06
 
-import oop_99880_Mohamad.Irsyad.Week05.CreditCard
-
 fun processCheckout(method: PaymentMethod, amount: Double) {
     println("-> Memulai checkout...")
     method.pay(amount)
