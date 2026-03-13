@@ -35,4 +35,6 @@ fun main() {
     speaker.turnon()
     cctv.turnon()
 
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 }
