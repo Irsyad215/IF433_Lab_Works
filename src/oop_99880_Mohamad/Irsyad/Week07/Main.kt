@@ -35,4 +35,23 @@ fun main() {
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
+
+    println("\n=== TUGAS MANDIRI: RPG CORE ENGINE ===")
+
+    GameManager.startGame()
+    GameManager.startGame()
+
+    println("\nPeluang drop item LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val mySword = Weapon.forgeStarterSword()
+    println("Senjata awal: ${mySword.item.name}, Damage: ${mySword.item.damage}, Durability: ${mySword.durability}")
+
+    val upgradedSwordItem = mySword.item.copy(damage = 25)
+    println("Senjata di-upgrade: ${upgradedSwordItem.name}, Damage Baru: ${upgradedSwordItem.damage}")
+
+    println("\n--- MULAI PERJALANAN ---")
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedSwordItem))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
