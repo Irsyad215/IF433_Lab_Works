@@ -22,4 +22,10 @@ fun main() {
     val data2 = Datauser("Alice", 22)
     println(data1)
     println("sama? ${data1 === data2}")
+
+    val data3 = data1.copy(age = 23)
+    println("Hasil Copy: $data3")
+
+    val (username, userAge) = data1
+    println("Destructed: $username Berumur $userAge")
 }
