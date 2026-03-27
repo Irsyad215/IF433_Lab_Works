@@ -1,8 +1,7 @@
 package oop_99880_Mohamad.Irsyad.Week07
 
-class Weapon private constructor(val item: GameItem, val durability: Int) { [cite: 156]
+class Weapon private constructor(val item: GameItem, val durability: Int) {
 
-    // Pabrik otomatis penyedia senjata [cite: 158]
     companion object {
         fun forgeStarterSword(): Weapon {
             val starterItem = GameItem("Pedang Kayu Bapuk", 5, ItemRarity.COMMON)

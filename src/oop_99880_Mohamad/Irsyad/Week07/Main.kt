@@ -1,7 +1,5 @@
 package oop_99880_Mohamad.Irsyad.Week07
 
-import oop_99880_Mohamad.Irsyad.Week07.NetworkClient.Companion.BASE_URL
-
 fun main() {
     println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
