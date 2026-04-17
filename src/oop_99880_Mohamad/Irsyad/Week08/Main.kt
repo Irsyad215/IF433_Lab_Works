@@ -6,13 +6,13 @@ fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null, null)
 
-    val destination = emptyOrder.deliveryDetails?.adress?.city?.name ?: "kota tidak diketahui"
+    val destination = emptyOrder.deliveryDetails?.address?.city?.name ?: "kota tidak diketahui"
     println("Tujuan pengiriman : $destination")
 
     println("\n=== TEST LET BLOCK ===")
     val validOrder = Order(null, 250000)
 
-    val receipt = validOrder.totalprice?.let { price ->
+    val receipt = validOrder.totalPrice?.let { price ->
         val tax = price * 0.11
         "transaksi Valid. harga: Rp$price, Pajak: Rp$tax "
     } ?: "Transaksi Invalid: Harga belom di-set!"
@@ -35,4 +35,8 @@ fun main() {
             println("Ditemukan Teks: ${it.uppercase()}")
         }
     }
+
+    val someObject: Any = 100
+    val safeString = someObject as? String?: "Unknown String"
+    println("Hasil cast + fallback: $safeString")
 }
