@@ -1,9 +1,15 @@
 package oop_99880_Mohamad.Irsyad.Week08
 
-Sealed class  Product()
+sealed class Product()
 
 data class Electronic(
     val id: String,
-    val Name: String,
-    val WarrantyMonths: Int
+    val name: String,
+    val warrantyMonths: Int
+) : Product()
+
+data class Clothing(
+    val id: String,
+    val name: String,
+    val size: String
 ) : Product()
