@@ -49,9 +49,6 @@ fun main() {
     val upgradedSwordItem = mySword.item.copy(damage = 25)
     println("Senjata di-upgrade: ${upgradedSwordItem.name}, Damage Baru: ${upgradedSwordItem.damage}")
 
-    val upgradedSwordItem = mySword.item.copy(damage = 25)
-    println("Senjata di-upgrade: ${upgradedSwordItem.name}, Damage Baru: ${upgradedSwordItem.damage}")
-
     println("\n--- MULAI PERJALANAN ---")
     processEvent(BattleState.SafeZone)
     processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
