@@ -1,5 +1,7 @@
 package oop_99880_Mohamad.Irsyad.Week08
 
+import oop_99880_Mohamad.Irsyad.Week06.Smartphone
+
 fun Main {
     println("=== TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null ,null)
@@ -16,4 +18,13 @@ fun Main {
     } ?: "Transaksi Invalid: Harga belom di-set!"
 
     println(receipt)
+
+    println("\n=== TEST SAFE CASTING ===")
+    val mixedData: List<Any> = listOf(
+        "Smartphone",
+        1500000,
+        UserProfile("Andi", null),
+        "Laptop",
+        4500000.0
+    )
 }
