@@ -25,7 +25,7 @@ class ApiParser {
         }
     }
 
-    fun checkout(product: Product) {
+    fun checkout(product: Product) { //Checkout method implemented
         val id = when (product) {
             is Electronic -> product.id
             is Clothing -> product.id
