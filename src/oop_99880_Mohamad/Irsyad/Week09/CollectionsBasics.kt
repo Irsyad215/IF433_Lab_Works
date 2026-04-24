@@ -9,4 +9,12 @@ fun main() {
     scores.add(95)
     scores[0] = 88
     println("Mutable List: $scores")
+
+    val uniqueNumbers = setOf(1, 2, 2, 3, 3, 4)
+    println("Unique Numbers (Set): $uniqueNumbers")
+
+    val activeUsers = mutableSetOf("UserA", "UserB")
+    activeUsers.add("userC")
+    activeUsers.add("userA")
+    println("activeUsers: $activeUsers")
 }
