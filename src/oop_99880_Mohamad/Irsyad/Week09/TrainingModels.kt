@@ -1,7 +1,7 @@
-package oop_99880_Mohamad.Irsyad.Week08
+package oop_99880_Mohamad.Irsyad.Week09
 
-data class Tradelog(
-    val pair : String,
+data class TradeLog(
+    val pair: String,
     val position: String,
     val leverage: Int,
     val roe: Double,
