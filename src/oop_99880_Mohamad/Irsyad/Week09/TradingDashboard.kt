@@ -20,4 +20,7 @@ fun main() {
 
     val winningTrades = closedTrades.filter { it.roe > 0 }
     println("Winning trades: ${winningTrades.size}")
+
+    val losingTrades = closedTrades.filter { it.roe <= 0 }
+    println("Losing trades: ${losingTrades.size}")
 }
