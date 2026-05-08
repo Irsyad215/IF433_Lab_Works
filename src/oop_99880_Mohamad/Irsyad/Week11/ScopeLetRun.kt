@@ -1,12 +1,19 @@
 package oop_99880_Mohamad.Irsyad.Week11
 
 fun main() {
-    println("=== TEST LET FUNCTION ===")
-    val name: String? = "Alexander"
+        println("=== TEST LET FUNCTION ===")
+        val name: String? = "Alexander"
 
-    val length = name?.let {
-        println("Nama Terdeteksi: $it")
-        it.length
+        val length = name?.let {
+            println("Nama terdeteksi: $it")
+            it.length
+        }
+        println("Panjang nama: $length")
+
+    println("\n=== TEST RUN FUNCTION ===")
+    val result = "Kotlin".run {
+        println("Memproses kata: ${this}")
+        length * 2
     }
-    println("Panjang Nama: $length")
+    println("Hasil kalkulasi run: $result")
 }
