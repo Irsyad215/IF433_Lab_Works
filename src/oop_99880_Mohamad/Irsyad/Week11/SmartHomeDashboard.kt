@@ -1,5 +1,12 @@
 package oop_99880_Mohamad.Irsyad.Week11
 
 fun main() {
-    val homeDevice = mutableListOf<SmartDevice>()
+    val homeDevices = mutableListOf<SmartDevice>()
+
+    SmartDevice("Philips WiZ Living Room", "Lighting").apply {
+        isOnline = true
+        powerLoad = 12
+    }.also {
+        homeDevices.add(it)
+    }
 }
