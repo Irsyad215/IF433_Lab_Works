@@ -29,4 +29,11 @@ fun main() {
     searchResult?.let {
         println(it.diagnose())
     }
+
+    with(homeDevices) {
+        println("\n=== DASHBOARD ===")
+        println("Total perangkat: ${this.size}")
+    }
+
+
 }
