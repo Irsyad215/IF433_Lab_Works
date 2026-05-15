@@ -59,4 +59,6 @@ fun main() {
             println("eringatan ke Pemilik: ${error.message}")
             println("(Opsional: Berikan chicken jerky secara manual)")
         }
+    println()
+    println("=== SMART FEEDER PIPELINE SELESAI ===")
 }
