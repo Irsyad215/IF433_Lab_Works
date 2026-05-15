@@ -17,3 +17,25 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 
 fun main() {
     var currentKibbleStock = 50
+    println("=== JADWAL MAKAN 1 (PAGI) ===")
+    try {
+        val sisaStok = dispenseKibble(
+            requestedGram = 80,
+            availableGram = currentKibbleStock,
+            isJammed = false
+        )
+        currentKibbleStock = sisaStok
+        println("Stok kibble tersisa: $currentKibbleStock gr")
+    } catch (e: DispenserJamException) {
+        println("Hardware Error: ${e.message}")
+        println("Tindakan: Hubungi teknisi untuk memperbaiki dispenser.")
+
+    } catch (e: FoodEmptyException) {
+        println("Stok Error: ${e.message}")
+        println("Tindakan: Segera isi ulang wadah kibble!")
+
+    } catch (e: Exception) {
+        println("Error Tak Terduga: ${e.message}")
+
+    }
+}
