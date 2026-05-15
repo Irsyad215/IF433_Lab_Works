@@ -10,4 +10,10 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
     if (requestedGram > availableGram) {
         throw FoodEmptyException(requestedGram, availableGram)
     }
+
+    println("Kibble berhasil dikeluarkan!")
+    return availableGram - requestedGram
 }
+
+fun main() {
+    var currentKibbleStock = 50
