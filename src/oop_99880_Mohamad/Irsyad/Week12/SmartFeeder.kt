@@ -40,4 +40,15 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+
+    println("=== JADWAL MAKAN 2 (SORE) ===")
+    println("Pemilik telah mengisi ulang kibble. Stok sekarang: 1000 gr")
+
+    runCatching {
+        dispenseKibble(
+            requestedGram  = 30,
+            availableGram  = 1000,
+            isJammed       = false
+        )
+    }
 }
