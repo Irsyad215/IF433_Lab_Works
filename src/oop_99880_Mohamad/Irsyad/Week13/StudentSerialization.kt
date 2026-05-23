@@ -10,4 +10,8 @@ fun Student.toCsv(): String = "$name,$age,$gpa"
 fun fromCsv(line: String): Student {
     val parts = line.split(",")
     return Student(parts[0],parts[1].toInt(),parts[2].toDouble())
+
+    fun saveStudents(students: List<Student>, path: String) {
+        File(path).writeText(students.joinToString("\n") { it.toCsv() })
+    }
 }
