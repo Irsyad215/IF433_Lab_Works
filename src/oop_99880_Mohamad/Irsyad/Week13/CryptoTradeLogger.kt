@@ -48,7 +48,6 @@ fun loadTrades(path: String): List<TradeRecord> {
 
 fun main() {
 
-    // CP 17: Mock trade data
     val trades = listOf(
         TradeRecord(id = 1, symbol = "BTCUSDT", type = "Long", margin = 100.0, pnl = 35.5),
         TradeRecord(id = 2, symbol = "ETHUSDT", type = "Short", margin = 50.0, pnl = -12.0),
@@ -56,4 +55,7 @@ fun main() {
     )
     saveTrades(trades, path = "crypto_trades.csv")
     println("Trades berhasil disimpan ke crypto_trades.csv")
+
+    File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+    println("Baris korup berhasil di-inject.")
 }
