@@ -11,3 +11,12 @@ class PostgresDatabase : Database {
 class MySQLDatabaseSafe : Database {
     override fun query(sql: String) = listOf("mysql_data1", "mysql_data2")
 }
+
+class SafeUserService(private val db: Database) {
+    fun getUser(id: Int) = db.query("SELECT * FROM users WHERE id=$id")
+}
+
+fun main() {
+    val service = SafeUserService(PostgresDatabase())
+    println(service.getUser(1))
+}
