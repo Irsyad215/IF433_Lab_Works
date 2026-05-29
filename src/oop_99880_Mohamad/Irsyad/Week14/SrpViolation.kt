@@ -13,5 +13,3 @@ class UserManager {
         println("Sending email to: ${user.email}")
     }
 }
-
-//checkpoint 2: implement basic writeText function
