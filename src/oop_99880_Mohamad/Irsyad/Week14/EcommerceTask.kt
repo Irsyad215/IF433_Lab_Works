@@ -43,4 +43,32 @@ class EmailNotifier : NotificationService {
 class SafeOrderProcessor(
     private val repo: OrderRepository,
     private val notifier: NotificationService
-)
+) {
+    fun processOrder(itemName: String, basePrice: Double, pricing: PricingStrategy) {
+        val finalPrice = pricing.calculate(basePrice)
+        println("Memproses pesanan $itemName seharga $finalPrice")
+        repo.saveOrder(itemName, finalPrice, pricing.javaClass.simpleName)
+        notifier.sendNotification(itemName)
+    }
+}
+
+interface PricingStrategy {
+    fun calculate(price: Double): Double
+}
+
+class RegularPricing : PricingStrategy {
+    override fun calculate(price: Double) = price
+}
+
+class VipPricing : PricingStrategy {
+    override fun calculate(price: Double) = price * 0.90
+}
+
+fun main() {
+    val processor = SafeOrderProcessor(
+        repo     = CsvOrderRepository(),
+        notifier = EmailNotifier()
+    )
+    processor.processOrder("Laptop",      15_000_000.0, RegularPricing())
+    processor.processOrder("Headphones",   2_000_000.0, VipPricing())
+}
